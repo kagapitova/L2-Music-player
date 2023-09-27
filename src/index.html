@@ -10,6 +10,7 @@
 </head>
 <body>
 <div class="custom__player">
+    <h2 class="header">Custom Equalizers</h2>
     <div class="player-controls">
         <ul class="play-list">
         </ul>
@@ -55,28 +56,16 @@
     </div>
 </div>
 <div class="wave__player">
-    <div class="wave"></div>
-    <div class="player-controls">
+    <div class="wave__container">
+        <h2  class="header">WaveSurfer</h2>
         <div class="player__btns">
-            <button class="play-prev-wave player-icon"></button>
-            <button class="play-wave player-icon"></button>
-            <button class="play-next-wave player-icon"></button>
-        </div>
-        <div>
-            <input class="player__range player__progress-bar js-player-audio-progress" value="0" min="0" max="100" type="range">
-        </div>
-        <div class="player__duration-wrapper">
-            <span class="player__timer js-player-timer">0:00</span>
-            /
-            <span class="player__duration js-player-duration">0:30</span>
-        </div>
-        <div class="player__btns1">
-            <button class="player__btn player__btn--volume icon-volumeHigh js-player-btn-volume" type="button"></button>
-            <input class="player__range player__volume js-player-volume-progress" min="0" max="100" type="range">
+            <button class="play-wave play player-icon"></button>
         </div>
     </div>
+    <div class="wave"></div>
 </div>
 <script type="module" src="js/main.js"></script>
 <script src="https://unpkg.com/wavesurfer.js@7"></script>
+<script type="module" src="js/wave.js"></script>
 </body>
 </html>

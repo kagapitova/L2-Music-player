@@ -227,3 +227,21 @@ button {
     min-height: 100px;
     margin-right: 1px;
 }
+
+.header {
+    color: white;
+    text-align: center;
+}
+
+
+.play-wave {
+    margin-left: 90px;
+}
+
+.wave__container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
