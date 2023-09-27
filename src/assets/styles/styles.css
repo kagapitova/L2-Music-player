@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    background-color: rgba(128, 128, 128, 0.62);
+}
+
+button {
+    display: block;
+    padding: 0;
+    color: #ffffff;
+    background-color: transparent;
+    border: 0;
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.custom__player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player__item.active {
+    color: #0cebb8;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 28px;
+    margin-top: 5%;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.play-list {
+    text-align: left;
+}
+
+.player-visual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    min-height: 250px;
+}
+
+.play-item {
+    position: relative;
+    padding: 5px;
+    padding-left: 20px;
+    list-style: none;
+    opacity: .8;
+    cursor: pointer;
+    transition: .3s;
+    color: white;
+    font-size: 25px;
+}
+
+.play-item:hover {
+    opacity: 1;
+}
+
+.play-item::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-weight: 900;
+}
+
+.item-active::before {
+    color: #0cebb8;
+}
+
+.player-icon,
+.slider-icon,
+.change-quote {
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    opacity: .8;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.player-icon:hover,
+.slider-icon:hover,
+.change-quote:hover,
+.icon-volumeHigh:hover,
+.icon-volumeMute:hover {
+    opacity: 1;
+}
+
+.player-icon:active,
+.slider-icon:active,
+.change-quote:active {
+    border: 0;
+    outline: 0;
+    transform: scale(1.1);
+}
+
+.play {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-image: url("../img/svg/play.svg");
+}
+
+.pause {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-image: url("../img/svg/pause.svg");
+}
+
+.play-prev {
+    background-image: url("../img/svg/play-prev.svg");
+}
+
+.play-next {
+    background-image: url("../img/svg/play-next.svg");
+}
+.icon-volumeHigh {
+    height: 25px;
+    width: 25px;
+    color: white;
+    opacity: .8;
+    background-image: url("../img/svg/volume.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-volumeMute {
+    height: 25px;
+    width: 25px;
+    color: white;
+    opacity: .8;
+    background-image: url("../img/svg/mute.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.player__btns {
+    width: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player__btns1 {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player__duration-wrapper {
+    color: white;
+    opacity: .8;
+}
+
+.player__progress-bar {
+    width: 200px;
+}
+
+.player__range {
+    height: 5px;
+    opacity: 0.75;
+    -webkit-appearance: none;
+    transition: opacity 0.4s ease-in-out;
+}
+.player__range::-ms-track {
+    width: 100%;
+    color: transparent;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.player__range::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.player__range::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.player__range::-ms-thumb {
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#logo{
+
+    border-radius: 50%;
+    background: #0cebb8;
+}
+
+.line {
+    width: 5px;
+    margin-left: 1.5px;
+    background-color: #0cebb8;
+}
+
+.line-eq {
+    display: flex;
+    align-items: flex-end;
+    min-height: 100px;
+    margin-right: 1px;
+}
