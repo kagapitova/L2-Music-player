@@ -13,4 +13,4 @@ https://kagapitova.github.io/L2-Music-player/src/
 - `JS`.
 
 ## deadline - 11.10.2023 
-## ready - 28.09.2023
+## ready - 06.10.2023
