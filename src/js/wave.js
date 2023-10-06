@@ -1,6 +1,7 @@
 import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js';
 import playList from "./tracks.js";
-import {statments} from "./statments.js";
+import {audio, statments} from "./statments.js";
+import {setAudioProgress} from "./equalizer.js";
 
 export const wavesurfer = WaveSurfer.create({
 	container: ".wave",
@@ -15,18 +16,27 @@ export const wavesurfer = WaveSurfer.create({
 	barGap: 1.5,
 });
 
-const playWave = document.querySelector(".play-wave");
-const muteWave = document.querySelector(".player__btn-wave");
- function setWave(){
+export function setWave() {
 	wavesurfer.load(playList[statments.trackNum].src);
-	
-	 playWave.addEventListener("click", ()=>{
-		 wavesurfer.playPause();
-		 playWave.classList.toggle('pause')
-		
-	 });
-
+	setWaveTime(0);
 }
 
-setWave();
+export function playWave() {
+	wavesurfer.setVolume(0);
+	wavesurfer.play();
+}
 
+export function stopWave() {
+	wavesurfer.setVolume(0);
+	wavesurfer.pause();
+}
+
+export function setWaveTime(time) {
+	wavesurfer.setTime(time);
+}
+
+wavesurfer.on('click', (timePercent) => {
+		setAudioProgress(audio, timePercent)
+})
+
+setWave();
